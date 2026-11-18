@@ -1,11 +1,15 @@
 import { useState } from 'react'
 import './App.css'
 
+import { InlineField } from './components/InlineField/InlineField'
+
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <div></div>
+    <div>
+      Hello World
+      <InlineField label="name" />
+    </div>
   )
 }
 

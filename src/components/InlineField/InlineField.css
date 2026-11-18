@@ -1,0 +1,21 @@
+.form-group {
+    /* background-color: red; */
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    /* justify-content: space-between; */
+  }
+
+  .value {
+    cursor: pointer;
+    padding: 5px;
+  }
+
+  .value:hover {
+    background: rosybrown;
+  }
+
+  input, textarea {
+    flex: 1;
+    max-width: 250px;
+  }
