@@ -1,9 +1,9 @@
 import "./InlineField.css";
 import { useState } from "react";
 
-export function InlineField({ type="text", label }) {
+export function InlineField({ type="text", label, inputValue, onInputChange, name }) {
   const [isEditing, setIsEditing] = useState(false);
-  const [inputValue, setInputValue] = useState("Thu Dong");
+  // const [inputValue, setInputValue] = useState("Thu Dong");
 
   const commitEdit = () => {
     setIsEditing(false)
@@ -38,18 +38,20 @@ export function InlineField({ type="text", label }) {
           autoFocus
           aria-label={label}
           value={inputValue}
+          name={name}
           onBlur={commitEdit}
           onKeyDown={handleKeyDown}
-          onChange={(e) => setInputValue(e.target.value)}
+          onChange={(e) => onInputChange(e.target.value)}
         ></textarea>
       ) : (
         <input
           autoFocus
           aria-label={label}
           value={inputValue}
+          name={name}
           onBlur={commitEdit}
           onKeyDown={handleKeyDown}
-          onChange={(e) => setInputValue(e.target.value)}
+          onChange={(e) => onInputChange(e.target.value)}
         />
       )}
     </div>

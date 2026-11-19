@@ -1,14 +1,14 @@
 import { useState } from 'react'
 import './App.css'
 
-import { InlineField } from './components/InlineField/InlineField'
+import { UserProfile } from './components/UserProfile/UserProfile'
 
 function App() {
 
   return (
     <div>
       Hello World
-      <InlineField label="name" />
+      <UserProfile />
     </div>
   )
 }
